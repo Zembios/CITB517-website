@@ -1,0 +1,11 @@
+{
+  "name": "CITB517-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Zembios/CITB517-website.git",
+  "author": "Nacho <nacho@eventix.nl>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
