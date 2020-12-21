@@ -20,7 +20,10 @@
         <a href="gallery.html">Gallery</a>
         <a class="active" href="feedback.html">Feedack</a>
     </div>
-    <div class="container">
+    <div class="container text-center">
+        <h1>Feedback</h1>
+    </div>
+    <div class="container feedback-container">
         <form id="feedback-form">
         
             <label for="fname">First Name</label>
@@ -33,9 +36,7 @@
         
         </form>
     </div>
-    <div id="feedback" class="feedback container">
-
-    </div>
+    <div id="feedback" class="container"></div>
     <div class="footer">
         <a href="index.html" class="link-footer-home">&#8608; Home</a><br>
         <a href="gallery.html" class="link-footer-gallery">&#8608; Gallery</a><br>
@@ -44,15 +45,26 @@
     <script>
         $('#feedback-form').submit((e) => {
             e.preventDefault();
-            $('#feedback').css('display', 'block');
             addFeedback();
         });
 
         function addFeedback() {
             let name = $("#fname").val();
             let content = $("#content").val();
-            $("<div class='col-md-12 col-sm-12'><h3>" + name + "</h3><p>" + content + "</p></div>").appendTo("#feedback");
+            $("<div class='col-md-12 col-sm-12 feedback-comment'><h3>" + name + "</h3><p>" + content + "</p><p>" + new Date().toLocaleString() + "</p></div>").prependTo("#feedback");
         }
+
+        let d = new Date();
+        d.setHours(d.getHours() - 2.3);
+        let johnnyTime = d.toLocaleString();
+        d.setHours(d.getHours() - 1.5);
+        let krisiTime = d.toLocaleString();
+        d.setHours(d.getHours() - 3.75)
+        let donnyTime = d.toLocaleString();
+        
+        $(document).ready(() => {
+            $("<div class='col-md-12 col-sm-12 feedback-comment'><h3>Johnny Cage</h3><p>We gotta go do some urbex again!</p><p>" + johnnyTime + "</p></div><div class='col-md-12 col-sm-12 feedback-comment'><h3>Krisi Ch.</h3><p>Those are some lovely memories in the gallery.</p><p>" + krisiTime + "</p></div><div class='col-md-12 col-sm-12 feedback-comment'><h3>Donny Slide</h3><p>Nice website bro!</p><p>" + donnyTime + "</p></div>").appendTo('#feedback');
+        });
     </script>
 </body>
 </html>

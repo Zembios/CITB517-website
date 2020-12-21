@@ -21,6 +21,8 @@
         <a href="feedback.html">Feedack</a>
     </div>
     <div class="container columns text-center">
+        <h1>Gallery</h1>
+        <h3>Click on any image if you'd like to download it!</h3>
         <div class="gallery-row">
             <img src="img/ascend.jpg" alt="ascend" class="gallery-image">
             <img src="img/crew.jpg" alt="ascend" class="gallery-image">
@@ -46,16 +48,9 @@
     <script src="js/download.js"></script>
     <script>
         $('img.gallery-image').click((e, element) => {
-            // e.preventDefault();
-            // // window.location.href = e.target.src;
-            // window.location.assign(e.target.src);
             console.log(e.target.src);
             download(e.target.src);
         });
-        
-        // $.fileDownload('some/file.pdf')
-        //     .done(function () { alert('File download a success!'); })
-        //     .fail(function () { alert('File download failed!'); });
     </script>
 </body>
 </html>
