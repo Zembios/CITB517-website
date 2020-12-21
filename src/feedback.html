@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My personal page</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
@@ -20,22 +20,39 @@
         <a href="gallery.html">Gallery</a>
         <a class="active" href="feedback.html">Feedack</a>
     </div>
-    <div class="container columns text-center">
-        <h1 class="column col-md-6 col-md-offset-3 col-sm-12">Lachezar Zahariev F103149</h1>
-        <img src="img/profile.jpg" alt="profile-pic" class="image col-md-6 col-md-offset-3 col-sm-8">
-        <h2 class="col-md-8 col-md-offset-2 col-sm-12">Who am I?</h2>
-        <p class="description text-left col-md-8 col-md-offset-2 col-sm-12">Hi, I'm Lachezar Zahariev, Nacho and I'm 21 years old. 
-            I live in Sofia, Bulgaria and except for my past two years I've lived here 
-            my entire life. Last two years I spent studying in the Netherlands 
-            where I made a lot of progress, but felt uncomfortable due to the environment 
-            which was the reason for me to come back. I like nearly anything related to nature and mountains,
-            I train parkour and climbing, ride downhill and play strategy games like Heroes III in my spare time.
-        </p>
+    <div class="container">
+        <form id="feedback-form">
+        
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+            <label for="content">Your Feedback</label>
+            <textarea id="content" name="content" placeholder="Write something.." class="content"></textarea>
+        
+            <input type="submit" value="Submit">
+        
+        </form>
+    </div>
+    <div id="feedback" class="feedback container">
+
     </div>
     <div class="footer">
         <a href="index.html" class="link-footer-home">&#8608; Home</a><br>
         <a href="gallery.html" class="link-footer-gallery">&#8608; Gallery</a><br>
         <a href="feedback.html" class="link-footer-feedback">&#8608; Feedack</a>
     </div>
+    <script>
+        $('#feedback-form').submit((e) => {
+            e.preventDefault();
+            $('#feedback').css('display', 'block');
+            addFeedback();
+        });
+
+        function addFeedback() {
+            let name = $("#fname").val();
+            let content = $("#content").val();
+            $("<div class='col-md-12 col-sm-12'><h3>" + name + "</h3><p>" + content + "</p></div>").appendTo("#feedback");
+        }
+    </script>
 </body>
 </html>
