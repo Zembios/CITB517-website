@@ -1,0 +1,20 @@
+{
+  "name": "CITB517-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Zembios/CITB517-website.git",
+  "author": "Nacho <nacho@eventix.nl>",
+  "license": "MIT",
+  "dependencies": {
+    "downloadjs": "^1.4.7",
+    "jquery": "^3.5.1",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "webpack": "^5.11.0"
+  }
+}
