@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "My Comments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container mt-75">
+    <h2>Your Comments</h2>
+
+    <div id="feedback" class="container">
+        @foreach (var comment in ViewBag.Comments)
+        {
+            <div class="col-md-12 col-sm-12 feedback-comment">
+                <h3>@comment.Commenter</h3>
+                <p>@comment.CommentText</p>
+            </div>
+        }
+    </div>
+</div>

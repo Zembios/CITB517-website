@@ -1,0 +1,26 @@
+﻿<div class="container columns text-center mt-75">
+    <h1>Gallery</h1>
+    <h3>Click on any image if you'd like to download it!</h3>
+    <div class="gallery-row">
+        <img src='@Url.Content("~/Content/img/ascend.jpg")' alt="ascend" class="gallery-image">
+        <img src='@Url.Content("~/Content/img/crew.jpg")' alt="ascend" class="gallery-image">
+    </div>
+    <div class="gallery-row">
+        <img src='@Url.Content("~/Content/img/mountain.jpg")' alt="ascend" class="gallery-image">
+        <img src='@Url.Content("~/Content/img/cat-temple.jpg")' alt="ascend" class="gallery-image">
+    </div>
+    <div class="gallery-row">
+        <img src='@Url.Content("~/Content/img/urbex.jpg")' alt="ascend" class="gallery-image">
+        <img src='@Url.Content("~/Content/img/profile.jpg")' alt="ascend" class="gallery-image">
+    </div>
+    <div class="gallery-row">
+        <img src='@Url.Content("~/Content/img/village.jpg")' alt="ascend" class="gallery-image">
+        <img src='@Url.Content("~/Content/img/pool.jpg")' alt="ascend" class="gallery-image">
+    </div>
+</div>
+<script>
+    $('img.gallery-image').click((e, element) => {
+        console.log(e.target.src);
+        download(e.target.src);
+    });
+</script>

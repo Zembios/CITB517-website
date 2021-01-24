@@ -1,0 +1,141 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #2D132C;
+}
+
+    .header a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .header a:hover {
+            background-color: #801336;
+            color: white;
+            text-decoration: none;
+        }
+
+        .header a.active {
+            text-decoration: none;
+            background-color: #c72c41;
+            color: white;
+        }
+
+.image {
+    max-width: 50vw;
+}
+
+.gallery-row {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gallery-image {
+    width: 40vw;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    height: 20vh;
+    background: #2D132C;
+    margin-top: 5vh;
+    padding-top: 5vh;
+    padding-left: 3vw;
+}
+
+.link-footer-home, .link-footer-gallery, .link-footer-feedback,
+.link-footer-home:hover, .link-footer-gallery:hover, .link-footer-feedback:hover,
+.link-footer-home:active, .link-footer-gallery:active, .link-footer-feedback:active {
+    color: #c72c41;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 2rem;
+}
+
+/* Feedback form css */
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #801336;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #c72c41;
+}
+
+/* Add a background color and some padding around the form */
+.feedback-container {
+    margin-top: 5vh;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.feedback-comment {
+    margin-top: 2vh;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.content {
+    height: 150px;
+    min-width: 100%;
+}
+
+.mt-75 {
+    margin-top: 75px;
+}
